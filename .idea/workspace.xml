@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shopping-list.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nest-cli.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/auth.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/auth.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/jwt.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/database.url.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/dto/create.item.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/interface/create.item.input.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/item.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/item.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/item.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/item.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/schema/item.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/dto/create.list.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/interface/create.list.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/list.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/list.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/list.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/list.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/list.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list/schema/list.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mail/email.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mail/email.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/profile/dto/create.profile.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/profile/profile.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/profile/profile.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/profile/profile.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/profile/schema/profile.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.doc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="29fWS49xMb8qOFZk7iq474ZvsI1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TUF\Desktop\shopping-list\src\item" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="" />
+      <created>1653504616990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653504616990</updated>
+      <workItem from="1653504619688" duration="7639000" />
+      <workItem from="1653546559869" duration="31000" />
+      <workItem from="1653546686929" duration="10993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

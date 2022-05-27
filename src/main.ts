@@ -6,6 +6,8 @@ import {ValidationPipe} from "@nestjs/common";
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
 
+    global['fetch'] = require('node-fetch');
+
     const options = new DocumentBuilder()
         .setTitle('Shopping-List')
         .setDescription('The Shopping List App')

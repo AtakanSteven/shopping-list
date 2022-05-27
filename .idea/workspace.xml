@@ -1,52 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shopping-list.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nest-cli.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/auth.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/auth.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/jwt.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/database.url.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/dto/create.item.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/interface/create.item.input.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/item.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/item.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/item.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/item.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/schema/item.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/dto/create.list.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/interface/create.list.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/list.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/list.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/list.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/list.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/list.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list/schema/list.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mail/email.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mail/email.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profile/dto/create.profile.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profile/profile.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profile/profile.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profile/profile.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/profile/schema/profile.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.doc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Basic apis for shopping list.">
+      <change afterPath="$PROJECT_DIR$/src/auth/auth.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/dto/auth.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/dto/code.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/jwt.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +48,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -97,8 +67,18 @@
       <updated>1653504616990</updated>
       <workItem from="1653504619688" duration="7639000" />
       <workItem from="1653546559869" duration="31000" />
-      <workItem from="1653546686929" duration="10993000" />
+      <workItem from="1653546686929" duration="24155000" />
+      <workItem from="1653638184397" duration="1174000" />
+      <workItem from="1653643159753" duration="14183000" />
     </task>
+    <task id="LOCAL-00001" summary="Basic apis for shopping list.">
+      <created>1653564246987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653564246987</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,5 +95,13 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic apis for shopping list." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic apis for shopping list." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

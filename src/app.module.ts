@@ -7,6 +7,7 @@ import { EmailModule } from "./mail/email.module";
 import { AuthModule } from "./auth/auth.module";
 import { ListModule } from "./list/list.module";
 import {ItemModule} from "./item/item.module";
+import {AuthConfig} from "./auth/auth.config";
 
 @Module({
   imports: [
@@ -16,7 +17,8 @@ import {ItemModule} from "./item/item.module";
       EmailModule,
       ListModule,
       ItemModule,
-      AuthModule
+      AuthModule,
+      AuthConfig
   ],
   controllers: [],
   providers: [],

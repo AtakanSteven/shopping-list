@@ -6,9 +6,13 @@ import { AuthController } from "./auth.controller";
 import { PassportModule } from "@nestjs/passport";
 import { JwtStrategy } from "./jwt.strategy";
 import {EmailModule} from "../mail/email.module";
+import { Code, CodeSchema } from "./schema/code.schema";
+import { MongooseModule } from "@nestjs/mongoose";
 
 @Module({
-    imports: [EmailModule, ProfileModule, PassportModule.register({ defaultStrategy: 'jwt' })],
+    imports: [EmailModule, ProfileModule, PassportModule.register({ defaultStrategy: 'jwt' }), MongooseModule.forFeature([
+        { name: Code.name, schema: CodeSchema },
+    ]),],
     providers: [AuthService, AuthConfig, JwtStrategy],
     exports:[AuthService],
     controllers: [AuthController]

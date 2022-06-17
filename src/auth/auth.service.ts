@@ -1,14 +1,16 @@
 import { AuthConfig } from './auth.config';
-import { forwardRef, Inject, Injectable } from '@nestjs/common';
+import {BadRequestException, forwardRef, Inject, Injectable} from '@nestjs/common';
 import {
     AuthenticationDetails, CognitoUserAttribute,
     CognitoUser,
     CognitoUserPool, CognitoUserSession,
 } from 'amazon-cognito-identity-js';
-import { Types } from "mongoose";
+import { Model, Types } from "mongoose";
 import { EmailService } from "../mail/email.service";
 import { AuthDto } from "./dto/auth.dto";
 import { CodeDto } from "./dto/code.dto";
+import { InjectModel } from "@nestjs/mongoose";
+import { Code, CodeDoc } from "./schema/code.schema";
 
 
 @Injectable()
@@ -18,6 +20,8 @@ export class AuthService {
         @Inject(forwardRef(() => AuthConfig))
         private readonly authConfig: AuthConfig,
         private readonly EmailService: EmailService,
+        @InjectModel(Code.name)
+        private readonly CodeModel: Model<CodeDoc>,
     ) {
         this.userPool = new CognitoUserPool({
             UserPoolId: this.authConfig.userPoolId,
@@ -55,9 +59,11 @@ export class AuthService {
         try {
             await this.registerUser(authDto)
             await this.EmailService.sendCode(name, code)
+            return this.saveCode(code, name)
         } catch (e) {
             if (e.name === "UsernameExistsException") {
                 await this.EmailService.sendCode(name, code)
+                return this.saveCode(code, name)
             }
         }
 
@@ -65,7 +71,14 @@ export class AuthService {
 
     async login(codeDto: CodeDto) {
         const { name, password, code } = codeDto;
-        return  this.authenticateUser(name, password, code);
+        try {
+            console.log("login function1")
+            return await this.authenticateUser(name, password, code);
+        } catch (e) {
+            if (e.message === "PreAuthentication failed with error INVALID_CODE."){
+                throw new BadRequestException("INVALID_CODE");
+            }
+        }
     }
 
     async authenticateUser(name: string, password: string, code: string)  {
@@ -98,6 +111,10 @@ export class AuthService {
 
     private generateRandomCode(): string {
         return Math.floor(100000 + Math.random() * 900000).toString();
+    }
+
+    private async saveCode(code: string, name: string) {
+        return await new this.CodeModel({ code, name, createdAt: Date.now() }).save();
     }
 }
 

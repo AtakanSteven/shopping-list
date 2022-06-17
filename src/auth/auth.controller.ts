@@ -9,11 +9,7 @@ export class AuthController {
 
     @Post('/login')
     async login(@Body() codeDto: CodeDto) {
-        try {
-            return await this.authService.login(codeDto);
-        } catch (e) {
-            throw new BadRequestException(e.message);
-        }
+        return await this.authService.login(codeDto);
     }
 
     @Post('/register')

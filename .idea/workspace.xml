@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Basic apis for shopping list.">
-      <change afterPath="$PROJECT_DIR$/src/auth/auth.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/dto/auth.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/dto/code.dto.ts" afterDir="false" />
+    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Changed authentication strategy to Cognito">
+      <change afterPath="$PROJECT_DIR$/src/auth/schema/code.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/jwt.strategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/auth" />
       <recent name="C:\Users\TUF\Desktop\shopping-list\src\item" />
     </key>
   </component>
@@ -69,7 +65,9 @@
       <workItem from="1653546559869" duration="31000" />
       <workItem from="1653546686929" duration="24155000" />
       <workItem from="1653638184397" duration="1174000" />
-      <workItem from="1653643159753" duration="14183000" />
+      <workItem from="1653643159753" duration="44098000" />
+      <workItem from="1654073840367" duration="2705000" />
+      <workItem from="1654685573395" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="Basic apis for shopping list.">
       <created>1653564246987</created>
@@ -78,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653564246987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed authentication strategy to Cognito">
+      <created>1653688674260</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653688674260</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,7 +103,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic apis for shopping list." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic apis for shopping list." />
+    <MESSAGE value="Changed authentication strategy to Cognito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed authentication strategy to Cognito" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

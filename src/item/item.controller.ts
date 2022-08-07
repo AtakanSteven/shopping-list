@@ -1,20 +1,19 @@
-import {Body, Controller, HttpStatus, Param, Post, Req, Res, UseGuards} from "@nestjs/common";
-import {ItemService} from "./item.service";
-import {AuthGuard} from "@nestjs/passport";
-import {CreateItemDto} from "./dto/create.item.dto";
+import { Body, Controller, HttpStatus, Param, Post, Req, Res, UseGuards } from '@nestjs/common';
+import { ItemService } from './item.service';
+import { CognitoGuard } from '../auth/cognito.guard';
+import { AddItemToListDto } from './dto/add.item.to.list.dto';
 
+@UseGuards(CognitoGuard)
 @Controller('item')
 export class ItemController {
-    constructor(private readonly ItemService: ItemService){}
+  constructor(private readonly itemService: ItemService) {}
 
-    @UseGuards(AuthGuard('jwt'))
-    @Post("/list/:listId")
-    async createItem(@Req() req, @Param("listId") listId, @Res() response, @Body() createItemDto: CreateItemDto, @Param() param) {
-        console.log("reqreq", req)
-        const user = req.user.id
-        const newItem = await this.ItemService.createItem(user, listId, createItemDto);
-        return response.status(HttpStatus.CREATED).json({
-            newItem
-        })
-    }
+  @Post('/:listId')
+  async createItem(@Req() request, @Param() param, @Res() response, @Body() addItemDto: AddItemToListDto) {
+    const user = request.user;
+    const newItem = await this.itemService.createItem(user, param.listId, addItemDto);
+    return response.status(HttpStatus.CREATED).json({
+      newItem,
+    });
+  }
 }

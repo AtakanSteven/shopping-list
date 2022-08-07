@@ -1,15 +1,14 @@
-import { Types } from "mongoose";
-
+import { Types } from 'mongoose';
 
 export interface CreateListInterfaceInput {
-    profile: Types.ObjectId,
-    name: string,
-    createdAt: Date
+  profile: Types.ObjectId;
+  owner: Types.ObjectId;
+  name: string;
 }
 
 interface Item {
-    _id: Types.ObjectId,
-    name: string,
-    quantity: number,
-    createdAt: Date,
+  _id: Types.ObjectId;
+  name: string;
+  quantity: number;
+  createdAt: Date;
 }

@@ -1,35 +1,39 @@
-import { Injectable } from "@nestjs/common";
-import { InjectModel } from "@nestjs/mongoose";
-import { Model, Types } from "mongoose";
-import { Item, ItemDocument } from "./schema/item.schema";
-import { CreateItemDto } from "./dto/create.item.dto";
-import { ItemRepository } from "./item.repository";
-import { ICreateItemInterfaceInput } from "./interface/create.item.input.interface";
-import { ListService } from "../list/list.service";
+import { NotFoundException, Injectable } from '@nestjs/common';
+import { Types } from 'mongoose';
+import { ItemRepository } from './item.repository';
+import { ICreateItemInterfaceInput } from './interface/create.item.input.interface';
+import { ListService } from '../list/list.service';
+import { IAddItemToListInputInterface } from './interface/add.item.to.list.input.interface';
+import { AddItemToListDto } from './dto/add.item.to.list.dto';
 
 @Injectable()
 export class ItemService {
-    constructor(
-        @InjectModel(Item.name)
-        private readonly itemModel: Model<ItemDocument>,
-        private readonly ItemRepository: ItemRepository,
-        private readonly ListService: ListService
-    ) {}
+  constructor(private readonly itemRepository: ItemRepository, private readonly listService: ListService) {}
 
-
-    async createItem(profile, listId, createItemDto: CreateItemDto) {
-        const { name, measurement, quantity } = createItemDto
-        const itemId = new Types.ObjectId()
-        const createItemInterfaceInput: ICreateItemInterfaceInput = {
-            itemId,
-            name,
-            measurement,
-            quantity
-        }
-        await this.ItemRepository.createItem(createItemInterfaceInput)
-        await this.ListService.addItemToList(profile, listId, createItemInterfaceInput)
-        return true;
+  async createItem(profileId: Types.ObjectId, listId, addItemDto: AddItemToListDto) {
+    const { name } = addItemDto;
+    const listExist = await this.listService.isListExist(listId);
+    if (listExist) {
+      const itemId = new Types.ObjectId();
+      const createItemInputInterface: ICreateItemInterfaceInput = {
+        itemId,
+        name,
+      };
+      await this.itemRepository.createItem(createItemInputInterface);
+      return await this.addItemToList(profileId, itemId, listId, addItemDto);
     }
+    throw new NotFoundException('NO_SUCH_LIST');
+  }
 
-
+  private async addItemToList(profileId: Types.ObjectId, itemId, listId, addItemDto: AddItemToListDto) {
+    const { name, measurement, quantity } = addItemDto;
+    const addItemToListInputInterface: IAddItemToListInputInterface = {
+      itemId,
+      name,
+      quantity,
+      measurement,
+      listId,
+    };
+    return await this.listService.addItemToList(profileId, addItemToListInputInterface);
+  }
 }

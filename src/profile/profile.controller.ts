@@ -1,18 +1,19 @@
-import { Body, Controller, HttpStatus, Post, Res } from "@nestjs/common";
-import {ProfileService} from "./profile.service";
-import {CreateProfileDto} from "./dto/create.profile.dto";
+import { Body, Controller, HttpStatus, Post, Req, Res, UseGuards } from '@nestjs/common';
+import { ProfileService } from './profile.service';
+import { CreateProfileDto } from './dto/create.profile.dto';
+import { CognitoGuard } from '../auth/cognito.guard';
 
-
-@Controller('profile')
+@UseGuards(CognitoGuard)
+@Controller('profiles')
 export class ProfileController {
-    constructor(private readonly ProfileService: ProfileService){}
+  constructor(private readonly profileService: ProfileService) {}
 
-    @Post()
-    async createProfile(@Res() response, @Body() createProfileDto: CreateProfileDto) {
-        const newProfile = await this.ProfileService.create(createProfileDto);
-        return response.status(HttpStatus.CREATED).json({
-            newProfile
-        })
-    }
-
+  @Post()
+  async createProfile(@Req() request, @Res() response, @Body() createProfileDto: CreateProfileDto) {
+    const user = request.user;
+    const newProfile = await this.profileService.create(createProfileDto, user);
+    return response.status(HttpStatus.CREATED).json({
+      newProfile,
+    });
+  }
 }

@@ -1,10 +1,8 @@
-import {Types} from "mongoose";
-import {Measurement} from "../../item/dto/create.item.dto";
-
+import { Types } from 'mongoose';
 
 export interface UpdateListItemInputInterface {
-    itemId: Types.ObjectId,
-    name: string,
-    quantity: number,
-    measurement: Measurement,
+  name: string;
+  itemId: Types.ObjectId;
+  quantity: number;
+  measurement: string;
 }

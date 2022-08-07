@@ -1,21 +1,27 @@
-import { BadRequestException, Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, HttpStatus, Post, Res } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import {CodeDto} from "./dto/code.dto";
-
+import { CodeDto } from './dto/code.dto';
+import { ApiTags } from '@nestjs/swagger';
+import { AuthDto } from './dto/auth.dto';
 
 @Controller('auth')
+@ApiTags('Authentication')
 export class AuthController {
-    constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService) {}
 
-    @Post('/login')
-    async login(@Body() codeDto: CodeDto) {
-        return await this.authService.login(codeDto);
-    }
+  @Post('/login')
+  async login(@Res() response, @Body() codeDto: CodeDto) {
+    const login = await this.authService.login(codeDto);
+    return response.status(HttpStatus.CREATED).json({
+      login,
+    });
+  }
 
-    @Post('/register')
-    async register(
-        @Body() registerRequest: { name: string; password: string; profileId: string },
-    ) {
-        return await this.authService.sendVerificationCode(registerRequest)
-    }
+  @Post('/register')
+  async register(@Res() response, @Body() authDto: AuthDto) {
+    const register = await this.authService.sendVerificationCode(authDto);
+    return response.status(HttpStatus.CREATED).json({
+      register,
+    });
+  }
 }

@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Changed authentication strategy to Cognito">
-      <change afterPath="$PROJECT_DIR$/src/auth/schema/code.schema.ts" afterDir="false" />
+    <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Improved authentication service">
+      <change afterPath="$PROJECT_DIR$/src/auth/interface/request.user.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helper/enums/request.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/dto/add.item.to.list.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/item/interface/add.item.to.list.input.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/requests/request.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/requests/request.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/requests/request.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/requests/request.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/requests/schema/request.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/jwt-auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/item.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/item.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mail/email.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/mail/email.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/dto/create.profile.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/dto/create.profile.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/profile.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/profile.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/profile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/profile/schema/profile.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/schema/profile.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,26 +43,41 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="29fWS49xMb8qOFZk7iq474ZvsI1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TUF/Desktop/shopping-list&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TUF\\Desktop\\shopping-list\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TUF\\Desktop\\shopping-list\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TUF\Desktop\shopping-list\src" />
+      <recent name="C:\Users\TUF\Desktop\shopping-list\src\item\dto" />
       <recent name="$PROJECT_DIR$/src/auth" />
       <recent name="C:\Users\TUF\Desktop\shopping-list\src\item" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TUF\Desktop\jupap-backend" />
+      <recent name="C:\Users\TUF\Desktop\shopping-list" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,6 +95,11 @@
       <workItem from="1653643159753" duration="44098000" />
       <workItem from="1654073840367" duration="2705000" />
       <workItem from="1654685573395" duration="15000" />
+      <workItem from="1656010034972" duration="3311000" />
+      <workItem from="1656356399538" duration="3609000" />
+      <workItem from="1658168412858" duration="4864000" />
+      <workItem from="1659901375167" duration="901000" />
+      <workItem from="1659902292867" duration="279000" />
     </task>
     <task id="LOCAL-00001" summary="Basic apis for shopping list.">
       <created>1653564246987</created>
@@ -83,7 +115,28 @@
       <option name="project" value="LOCAL" />
       <updated>1653688674260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added endpoints for creating items and lists.">
+      <created>1659902217488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659902217488</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Prettier and eslint configs">
+      <created>1659902323308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659902323308</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Improved authentication service">
+      <created>1659902497650</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659902497650</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,12 +152,14 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic apis for shopping list." />
     <MESSAGE value="Changed authentication strategy to Cognito" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed authentication strategy to Cognito" />
+    <MESSAGE value="Added endpoints for creating items and lists." />
+    <MESSAGE value="Prettier and eslint configs" />
+    <MESSAGE value="Improved authentication service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved authentication service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

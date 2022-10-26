@@ -36,9 +36,12 @@ export class CognitoGuard implements CanActivate {
 
           return true;
         } else {
-          const { ...rest } = profile;
-          request.user = { userId, isProfileExist: true, ...rest };
-          return true;
+          if (profile) {
+            const { ...rest } = profile;
+            request.user = { userId, isProfileExist: true, ...rest };
+            return true;
+          }
+          throw new UnauthorizedException();
         }
       }
       throw new UnauthorizedException();

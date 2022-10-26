@@ -8,12 +8,14 @@ import { Types } from 'mongoose';
 export class CognitoService {
   private readonly userPool: CognitoUserPool;
   public readonly verifier: CognitoJwtVerifierSingleUserPool<any>;
+  private readonly cognitoServerUser: CognitoUser;
 
   constructor() {
     this.userPool = new CognitoUserPool({
       UserPoolId: process.env.COGNITO_USER_POOL_ID,
       ClientId: process.env.COGNITO_CLIENT_ID,
     });
+    this.cognitoServerUser = new CognitoUser({ Pool: this.userPool, Username: 'server' });
   }
 
   /**

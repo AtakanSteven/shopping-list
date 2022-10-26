@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { CreateListDto } from './dto/create.list.dto';
 import { CreateListInterfaceInput } from './interface/create.list.interface';
 import { ListRepository } from './list.repository';
-import { UpdateListItemInputInterface } from './interface/update.list.input.interface';
-import { IAddItemToListInputInterface } from '../item/interface/add.item.to.list.input.interface';
+import { AddItemToListInputInterface } from './interface/add.item.to.list.input.interface';
+import { AddItemToListDto } from './dto/add.item.to.list.dto';
 
 @Injectable()
 export class ListService {
@@ -19,16 +19,16 @@ export class ListService {
     return await this.listRepository.createList(createListInput);
   }
 
-  async addItemToList(user, addItemToListInputInterface: IAddItemToListInputInterface) {
-    const { name, itemId, quantity, measurement, listId } = addItemToListInputInterface;
+  async addItemToList(user, addItemToListDto: AddItemToListDto) {
+    const { name, itemId, quantity, measurement, listId } = addItemToListDto;
 
-    const updateListItemInputInterface: UpdateListItemInputInterface = {
+    const addItemToListInputInterface: AddItemToListInputInterface = {
       name,
       itemId,
       quantity,
       measurement,
     };
-    return this.listRepository.updateListItem(user, listId, updateListItemInputInterface);
+    return this.listRepository.addItemToList(user, listId, addItemToListInputInterface);
   }
 
   async isListExist(listId: string): Promise<boolean> {

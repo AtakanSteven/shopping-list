@@ -11,9 +11,13 @@ export class AddItemToListDto {
   @IsString()
   name: string;
 
-  @ApiProperty({ example: 'potato', required: true })
+  @ApiProperty({ example: '631f8f35d83fe9d23d13d6cd', required: true })
   @IsMongoId()
   listId: string;
+
+  @ApiProperty({ example: '631f8f35d83fe9d23d13d6cd', required: true })
+  @IsMongoId()
+  itemId: string;
 
   @ApiProperty({ example: 'PIECE', required: true })
   @IsNotEmpty()

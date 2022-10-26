@@ -2,27 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d51594-951d-46b5-8290-d6f70562f328" name="Changes" comment="Improved authentication service">
-      <change afterPath="$PROJECT_DIR$/src/auth/interface/request.user.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/enums/request.enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/dto/add.item.to.list.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/item/interface/add.item.to.list.input.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requests/request.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requests/request.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requests/request.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requests/request.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/requests/schema/request.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/error-messages/error-messages.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shopping-list.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopping-list.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/item/item.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/item.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mail/email.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/mail/email.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile/dto/create.profile.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/dto/create.profile.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile/profile.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile/profile.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/cognito.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/cognito.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cognito/cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/cognito/cognito.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/dto/create.item.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/dto/create.item.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/interface/add.item.to.list.input.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/interface/add.item.to.list.input.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/item/item.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/item/item.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list/dto/update.list.item.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/dto/add.item.to.list.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list/interface/update.list.input.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/interface/add.item.to.list.input.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list/list.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/list.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list/list.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/list/list.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/profile/profile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/profile.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/profile/schema/profile.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/profile/schema/profile.schema.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +38,15 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/auth/dto/auth.dto.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/auth/dto/code.dto.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/auth/auth.service.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/auth/auth.module.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/auth/cognito.guard.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/auth/auth.controller.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/cognito/cognito.service.ts" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,30 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TUF/Desktop/shopping-list&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TUF\\Desktop\\shopping-list\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TUF\\Desktop\\shopping-list\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="16.17.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.18.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="C:\Users\TUF\Desktop\shopping-list\src" />
-      <recent name="C:\Users\TUF\Desktop\shopping-list\src\item\dto" />
-      <recent name="$PROJECT_DIR$/src/auth" />
-      <recent name="C:\Users\TUF\Desktop\shopping-list\src\item" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="C:\Users\TUF\Desktop\jupap-backend" />
       <recent name="C:\Users\TUF\Desktop\shopping-list" />
     </key>
@@ -100,6 +107,11 @@
       <workItem from="1658168412858" duration="4864000" />
       <workItem from="1659901375167" duration="901000" />
       <workItem from="1659902292867" duration="279000" />
+      <workItem from="1663009351211" duration="4019000" />
+      <workItem from="1664907927944" duration="2109000" />
+      <workItem from="1664910359263" duration="1388000" />
+      <workItem from="1665405775468" duration="2000" />
+      <workItem from="1666807688038" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="Basic apis for shopping list.">
       <created>1653564246987</created>
@@ -152,6 +164,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic apis for shopping list." />

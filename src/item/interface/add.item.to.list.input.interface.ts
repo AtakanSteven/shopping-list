@@ -1,8 +1,7 @@
-import { Types } from 'mongoose';
-import { Measurement } from '../../list/dto/update.list.item.dto';
+import { Measurement } from '../../list/dto/add.item.to.list.dto';
 
 export interface IAddItemToListInputInterface {
-  itemId: Types.ObjectId;
+  itemId: string;
   name: string;
   quantity: number;
   measurement: Measurement;

@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CognitoJwtVerifierSingleUserPool } from 'aws-jwt-verify/cognito-verifier';
+import { CognitoJwtVerifier } from 'aws-jwt-verify';
 import { AuthenticationDetails, CognitoUser, CognitoUserAttribute, CognitoUserPool, CognitoUserSession } from 'amazon-cognito-identity-js';
 
 import { Types } from 'mongoose';
@@ -14,6 +15,11 @@ export class CognitoService {
     this.userPool = new CognitoUserPool({
       UserPoolId: process.env.COGNITO_USER_POOL_ID,
       ClientId: process.env.COGNITO_CLIENT_ID,
+    });
+    this.verifier = CognitoJwtVerifier.create({
+      tokenUse: 'id',
+      userPoolId: process.env.COGNITO_USER_POOL_ID,
+      clientId: process.env.COGNITO_CLIENT_ID,
     });
     this.cognitoServerUser = new CognitoUser({ Pool: this.userPool, Username: 'server' });
   }

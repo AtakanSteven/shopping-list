@@ -4,7 +4,6 @@ import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from
 
 import { CognitoService } from '../cognito/cognito.service';
 import { Profile, ProfileDocument } from '../profile/schema/profile.schema';
-import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class CognitoGuard implements CanActivate {
@@ -12,7 +11,6 @@ export class CognitoGuard implements CanActivate {
     @InjectModel(Profile.name)
     private readonly profileModel: Model<ProfileDocument>,
     private readonly cognitoService: CognitoService,
-    private readonly jwtService: JwtService,
   ) {}
 
   async canActivate(context: ExecutionContext) {
@@ -21,8 +19,8 @@ export class CognitoGuard implements CanActivate {
 
     try {
       if (authToken) {
-        const result = await this.jwtService.decode(authToken);
-        const profileId = result['profile'];
+        const result = await this.cognitoService.verifier.verify(authToken);
+        const profileId = result.profile.toString();
         const email = result['email'];
         const userId = result.sub.toString();
         const profile = await this.getProfileInfoForHttpRequest(profileId);

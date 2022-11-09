@@ -8,10 +8,9 @@ import { ItemService } from './item.service';
 import { ItemRepository } from './item.repository';
 import { ListModule } from '../list/list.module';
 import { Profile, ProfileSchema } from '../profile/schema/profile.schema';
-import { JwtService } from '@nestjs/jwt';
 
 @Module({
-  providers: [ItemService, ItemRepository, JwtService],
+  providers: [ItemService, ItemRepository],
   controllers: [ItemController],
   imports: [
     MongooseModule.forFeature([

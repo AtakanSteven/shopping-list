@@ -8,10 +8,9 @@ import { RequestService } from './request.service';
 import { RequestRepository } from './request.repository';
 import { ListModule } from '../list/list.module';
 import { Profile, ProfileSchema } from '../profile/schema/profile.schema';
-import { JwtService } from '@nestjs/jwt';
 
 @Module({
-  providers: [RequestService, RequestRepository, JwtService],
+  providers: [RequestService, RequestRepository],
   controllers: [RequestController],
   imports: [
     MongooseModule.forFeature([

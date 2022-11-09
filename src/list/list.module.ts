@@ -6,10 +6,9 @@ import { ListService } from './list.service';
 import { ListController } from './list.controller';
 import { ListRepository } from './list.repository';
 import { Profile, ProfileSchema } from '../profile/schema/profile.schema';
-import { JwtService } from '@nestjs/jwt';
 
 @Module({
-  providers: [ListService, ListRepository, JwtService],
+  providers: [ListService, ListRepository],
   controllers: [ListController],
   imports: [
     MongooseModule.forFeature([

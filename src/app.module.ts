@@ -10,6 +10,7 @@ import { ItemModule } from './item/item.module';
 import { AuthConfig } from './auth/auth.config';
 import { CognitoModule } from './cognito/cognito.module';
 import { RequestModule } from './requests/request.module';
+import { MeModule } from './me/me.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { RequestModule } from './requests/request.module';
     EmailModule,
     ListModule,
     ItemModule,
+    MeModule,
     AuthModule,
     CognitoModule,
     AuthConfig,

@@ -1,4 +1,4 @@
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
@@ -17,11 +17,11 @@ export class ListRepository {
     return new this.listModel(createListInput).save();
   }
 
-  async addItemToList(profile, listId, addItemToListInputInterface: AddItemToListInputInterface) {
+  async addItemToList(profileId, listId, addItemToListInputInterface: AddItemToListInputInterface) {
     const { name, itemId, quantity, measurement } = addItemToListInputInterface;
-    const match = { profile: profile._id, list: listId };
+    const match = { profile: profileId, list: listId };
     const update = { $push: { items: { _id: itemId, name, quantity, measurement, createdAt: new Date() }, $position: 0 } };
-    return this.listModel.updateOne(match, update);
+    return this.listModel.updateOne(match, update).lean().exec();
   }
 
   async isListExist(listId: string): Promise<boolean> {
@@ -31,7 +31,10 @@ export class ListRepository {
   }
 
   async getListById(listId: string) {
-    const projection = { owner: 1 };
-    return await this.listModel.findById(listId, projection).lean().exec();
+    return await this.listModel.findById(listId, { owner: 1 }).lean().exec();
+  }
+
+  async getListsByProfile(profileId: Types.ObjectId) {
+    return await this.listModel.find({ profile: profileId }).lean().exec();
   }
 }

@@ -4,10 +4,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ProfileController } from './profile.controller';
 import { ProfileService } from './profile.service';
 import { EmailModule } from '../mail/email.module';
-import { JwtService } from '@nestjs/jwt';
 
 @Module({
-  providers: [ProfileService, JwtService],
+  providers: [ProfileService],
   controllers: [ProfileController],
   imports: [MongooseModule.forFeature([{ name: Profile.name, schema: ProfileSchema }]), EmailModule],
   exports: [ProfileService],

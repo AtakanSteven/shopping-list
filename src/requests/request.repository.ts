@@ -1,9 +1,8 @@
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
 
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { RequestDocument, Request } from './schema/request.schema';
-import { IUserRequest } from '../auth/interface/request.user.interface';
 import { RequestEnum } from '../helper/enums/request.enum';
 
 @Injectable()
@@ -13,17 +12,17 @@ export class RequestRepository {
     private readonly requestModel: Model<RequestDocument>,
   ) {}
 
-  async joinListRequest(profile: IUserRequest, listId: string) {
+  async joinListRequest(profileId: Types.ObjectId, listId: string) {
     return new this.requestModel({
-      sender: profile._id,
+      sender: profileId,
       listId,
       status: RequestEnum.PENDING,
     }).save();
   }
 
-  async isRequestExist(profile: IUserRequest, listId: string) {
+  async isRequestExist(profileId: Types.ObjectId, listId: string) {
     const match = {
-      sender: profile._id,
+      sender: profileId,
       listId,
     };
     const exists = await this.requestModel.exists(match).exec();
